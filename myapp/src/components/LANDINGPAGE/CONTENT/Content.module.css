@@ -1,0 +1,6 @@
+.container {
+  /* background-color: red; */
+  display: grid;
+  grid-template-columns: 50% 50%;
+  border: 1px solid black;
+}

@@ -1,0 +1,14 @@
+.container {
+  /* border: 1px solid white; */
+}
+.content {
+  /* border: 1px solid black; */
+  font-size: 0.7rem;
+  /* border: 1px solid black; */
+  margin: 1.5rem auto;
+  color: rgb(94, 94, 94);
+}
+.content:hover {
+  font-weight: 500;
+  color: black;
+}

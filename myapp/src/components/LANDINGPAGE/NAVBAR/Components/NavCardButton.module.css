@@ -1,0 +1,17 @@
+.content {
+  font-size: 0.7rem;
+  margin: 1rem auto;
+  border: 1px solid black;
+  padding: 0.4rem;
+  box-sizing: border-box;
+  border-radius: 10px;
+  width: 60%;
+  color: rgb(94, 94, 94);
+}
+.container {
+  /* border: 1px solid black; */
+}
+.container:hover {
+  font-weight: 500;
+  color: black;
+}
