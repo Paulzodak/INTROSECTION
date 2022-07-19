@@ -8,10 +8,12 @@
   margin: 1.5rem auto;
   transition: 1s;
   color: rgb(94, 94, 94);
-  background-color: white;
 }
-.content:hover {
+span:hover {
   font-weight: 600;
   transition: 0.3s;
   color: black;
+}
+button {
+  background-color: rgb(249, 249, 249);
 }

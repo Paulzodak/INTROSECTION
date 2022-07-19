@@ -6,6 +6,13 @@ import NavCardButton from "./Components/NavCardButton";
 import ArrowUp from "../../images/icon-arrow-up.svg";
 import ArrowDown from "../../images/icon-arrow-down.svg";
 import Dropdown from "./Components/Dropdown";
+
+// IMAGES
+import Calender from "../../images/icon-calendar.svg";
+import TodoList from "../../images/icon-todo.svg";
+import Reminder from "../../images/icon-reminders.svg";
+import Planning from "../../images/icon-planning.svg";
+
 const NavBar = () => {
   const NavBarItems = [
     {
@@ -19,19 +26,19 @@ const NavBar = () => {
       dropdown: [
         {
           text: "TodoList",
-          imgsrc: "bbb",
+          imgsrc: TodoList,
         },
         {
           text: "Calender",
-          imgsrc: "bbb",
+          imgsrc: Calender,
         },
         {
           text: "Reminder",
-          imgsrc: "bbb",
+          imgsrc: Reminder,
         },
         {
           text: "Planning",
-          imgsrc: "bbb",
+          imgsrc: Planning,
         },
       ],
     },

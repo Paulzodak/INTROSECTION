@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 // import DROPDOWN from "./Dropdown.module.css";
-const Dropdown = ({ senditems, sendstyle }) => {
+const Dropdown = ({ senditems, sendstyle, sendposition }) => {
   //   const [display, setDisplay] = useState("none");
   //   const displayChanger = () => {
   //     if (display === "none") {
@@ -13,18 +13,33 @@ const Dropdown = ({ senditems, sendstyle }) => {
   //     }
   //   };
   let DropdownStyle = {
-    marginTop: "1rem",
+    margin: "0.5rem 0.1rem",
     display: sendstyle,
+    position: sendposition,
+    fontSize: "0.6rem",
+    display: "block",
+    height: "1.2rem",
   };
 
-  //   //   console.log(DropdownStyle);
   const renderedItems = senditems.dropdown.map((index) => {
-    return <div style={DropdownStyle}>{index.text}</div>;
+    return (
+      <div style={DropdownStyle}>
+        <img
+          style={{
+            height: "0.7rem",
+            margin: "0px 5px 0px 0px",
+            padding: "0px",
+            verticalAlign: "bottom",
+          }}
+          src={index.imgsrc}
+        />
+        {index.text}
+      </div>
+    );
   });
   return (
     <div>
       <div>{renderedItems}</div>
-      {/* <button onClick={displayChanger}>j</button> */}
     </div>
   );
 };
