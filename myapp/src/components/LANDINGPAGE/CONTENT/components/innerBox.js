@@ -1,4 +1,5 @@
 import { render } from "@testing-library/react";
+import { useState } from "react";
 
 const InnerBox = ({ items }) => {
   //  ------------------ STYLES ---------------
@@ -36,16 +37,30 @@ const InnerBox = ({ items }) => {
     fontWeight: "700",
   };
   const InnerBoxStyleComponent4 = {
-    // border: "1px solid red",
     marginLeft: marginLeft,
     marginRight: "1rem",
-    // display: "grid",
-    // gridTemplateColumns: "25% 25% 25% 25%",
   };
-  const imageStyle = {
-    // border: "1px solid red",
+  const imageStyle = {};
+
+  const [buttonStyle, setButtonStyle] = useState(InnerBoxStyleComponent3);
+  const buttonHoverHandler = () => {
+    const InnerBoxStyleComponentnew = {
+      padding: "0.5rem 0.7rem",
+      marginTop: "0rem",
+      marginLeft: marginLeft,
+      marginTop: "2rem",
+      border: "2px solid black",
+      backgroundColor: "white",
+      color: "black",
+      borderRadius: "10px",
+      fontWeight: "700",
+    };
+    setButtonStyle(InnerBoxStyleComponentnew);
   };
 
+  const buttonOutHandler = () => {
+    setButtonStyle(InnerBoxStyleComponent3);
+  };
   //  ---------- CODE ------------
   if (items.content1) {
     return (
@@ -63,7 +78,13 @@ const InnerBox = ({ items }) => {
   } else if (items.content3) {
     return (
       <div>
-        <button style={InnerBoxStyleComponent3}>{items.content3}</button>
+        <button
+          onMouseOver={buttonHoverHandler}
+          onMouseOut={buttonOutHandler}
+          style={buttonStyle}
+        >
+          {items.content3}
+        </button>
       </div>
     );
   } else if (items.content4) {
