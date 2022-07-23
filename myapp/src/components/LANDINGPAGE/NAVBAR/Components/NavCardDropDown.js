@@ -20,6 +20,55 @@ const NavCardDropDown = ({ senditems }) => {
       console.log(display);
     }
   };
+  const CardStyleComponent = {
+    width: "5rem",
+    boxShadow: "0.01px 0.01px  6px gray",
+    borderRadius: "10px",
+    display: display,
+    backgroundColor: "white",
+    margin: "0.5rem 0rem",
+    position: "absolute",
+    left: "6rem",
+    zIndex: "5",
+    // padding: "2px",
+  };
+  const CardStyleComponent2 = {
+    width: "4rem",
+    boxShadow: "0.01px 0.01px  6px gray",
+    borderRadius: "10px",
+    display: display,
+    backgroundColor: "white",
+    margin: "0.5rem 0rem",
+    position: "absolute",
+    left: "12rem",
+    zIndex: "5",
+    // padding: "2px",
+  };
+  const RenderedItems1 = () => {
+    return (
+      <CardBorder sendstyle={CardStyleComponent}>
+        <Dropdown
+          className={NAVCARDDROPDOWN.dropdown}
+          sendstyle={CardStyleComponent}
+          sendposition={position}
+          senditems={senditems}
+        />
+      </CardBorder>
+    );
+  };
+  const RenderedItems2 = () => {
+    return (
+      <CardBorder sendstyle={CardStyleComponent2}>
+        <Dropdown
+          className={NAVCARDDROPDOWN.dropdown}
+          sendstyle={CardStyleComponent2}
+          sendposition={position}
+          senditems={senditems}
+        />
+      </CardBorder>
+    );
+  };
+
   return (
     <div className={NAVCARDDROPDOWN.container}>
       <button
@@ -28,18 +77,21 @@ const NavCardDropDown = ({ senditems }) => {
         // onMouseOut={mouseOutHandler}
       >
         <div onClick={mouseClickHandler}>
-          <span>{senditems.content}</span>
+          <span className={NAVCARDDROPDOWN.span}>{senditems.content}</span>
           &nbsp;&nbsp;
           <img src={imgSrc}></img>
         </div>
-        <CardBorder sendstyle={display}>
+        {/* <RenderedItems1 /> */}
+        {senditems.drop1 ? <RenderedItems1 /> : <RenderedItems2 />}
+
+        {/* <CardBorder sendstyle={display}>
           <Dropdown
             className={NAVCARDDROPDOWN.dropdown}
             sendstyle={display}
             sendposition={position}
             senditems={senditems}
           />
-        </CardBorder>
+        </CardBorder> */}
       </button>
     </div>
   );

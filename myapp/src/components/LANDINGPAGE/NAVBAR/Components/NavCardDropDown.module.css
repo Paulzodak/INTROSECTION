@@ -9,7 +9,7 @@
   transition: 1s;
   color: rgb(94, 94, 94);
 }
-span:hover {
+.span:hover {
   font-weight: 600;
   transition: 0.3s;
   color: black;
@@ -17,3 +17,15 @@ span:hover {
 button {
   background-color: rgb(249, 249, 249);
 }
+/* @media (max-width: 1000px) {
+  .content {
+    font-size: 0.5rem;
+    margin: 1.5rem auto;
+  }
+}
+@media (max-width: 800px) {
+  .content {
+    font-size: 0.4rem;
+    margin: 1.5rem auto;
+  }
+} */

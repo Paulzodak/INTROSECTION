@@ -20,6 +20,7 @@ const NavBar = () => {
       snap: "bb",
     },
     {
+      drop1: 1,
       content: "Features",
       icon: ArrowUp,
       activeIcon: ArrowDown,
@@ -43,6 +44,7 @@ const NavBar = () => {
       ],
     },
     {
+      drop2: 2,
       content: "Company",
       icon: ArrowUp,
       activeIcon: ArrowDown,

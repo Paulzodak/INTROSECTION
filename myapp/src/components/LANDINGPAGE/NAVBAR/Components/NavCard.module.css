@@ -12,3 +12,8 @@
   font-weight: 500;
   color: black;
 }
+/* @media (max-width: 1000px) {
+  .content {
+    font-size: 0.5rem;
+  }
+} */

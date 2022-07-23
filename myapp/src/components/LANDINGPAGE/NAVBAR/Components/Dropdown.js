@@ -1,21 +1,11 @@
 import { useState } from "react";
 
-// import DROPDOWN from "./Dropdown.module.css";
 const Dropdown = ({ senditems, sendstyle, sendposition }) => {
-  //   const [display, setDisplay] = useState("none");
-  //   const displayChanger = () => {
-  //     if (display === "none") {
-  //       setDisplay("absolute");
-
-  //       //   console.log(display);
-  //     } else if (display === "absolute") {
-  //       setDisplay("none");
-  //     }
-  //   };
   let DropdownStyle = {
     margin: "0.5rem 0.1rem",
     display: sendstyle,
     position: sendposition,
+    // top: "10px",
     fontSize: "0.6rem",
     display: "block",
     height: "1.2rem",
